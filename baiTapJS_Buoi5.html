@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bài tập JS Buổi 5</title>
+  <!-- BS 4 -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css"
+    integrity="sha384-zCbKRCUGaJDkqS1kPbPd7TveP5iyJE0EjAuZQTgFLD2ylzuqKfdKlfG/eSrtxUkn" crossorigin="anonymous">
+</head>
+
+<body>
+  <div class="container py-5">
+    <ul class="nav nav-tabs" id="myTab" role="tablist">
+      <li class="nav-item" role="presentation">
+        <a class="nav-link active" id="home-tab" data-toggle="tab" href="#baiTap1" role="tab" aria-controls="home"
+          aria-selected="true">Bài tập 1</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="profile-tab" data-toggle="tab" href="#baiTap2" role="tab" aria-controls="profile"
+          aria-selected="false">Bài tập 2</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#baiTap3" role="tab" aria-controls="contact"
+          aria-selected="false">Bài tập 3</a>
+      </li>
+      <li class="nav-item" role="presentation">
+        <a class="nav-link" id="contact-tab" data-toggle="tab" href="#baiTap4" role="tab" aria-controls="contact"
+          aria-selected="false">Bài tập 4</a>
+      </li>
+    </ul>
+    <div class="tab-content w-50" id="myTabContent">
+      <div class="tab-pane fade show active" id="baiTap1" role="tabpanel" aria-labelledby="home-tab">
+        <div class=" container py-5" id="bai1">
+          <h3>Bài tập 1 - Quản lý tuyển sinh</h3>
+          <form>
+            <div class="form-group">
+              <label for="diemMon1">Nhập điểm thi môn 1</label>
+              <input type="number" class="form-control" id="diemMon1" value="6">
+            </div>
+            <div class="form-group">
+              <label for="diemMon2">Nhập điểm thi môn 2</label>
+              <input type="number" class="form-control" id="diemMon2" value="9">
+            </div>
+            <div class="form-group">
+              <label for="diemMon3">Nhập điểm thi môn 3</label>
+              <input type="number" class="form-control" id="diemMon3" value="6">
+            </div>
+            <div class="container py-1">
+              <form>Vui lòng chọn Khu vực ưu tiên
+                <select id="khuVuc">
+                  <option value="">Chọn khu vực ưu tiên</option>
+                  <option value="2">Khu vực A</option>
+                  <option value="1">Khu vực B</option>
+                  <option value="0.5">Khu vực C</option>
+                  <option value="0">Không thuộc khu vực ưu tiên</option>
+                </select>
+              </form>
+            </div>
+            <div class="container py-1">
+              <form>Vui lòng chọn Đối tượng ưu tiên
+                <select id="doiTuong">
+                  <option value="">Chọn Đối tượng ưu tiên</option>
+                  <option value="2.5">Đối tượng 1</option>
+                  <option value="1.5">Đối tượng 2</option>
+                  <option value="1">Đối tượng 3</option>
+                  <option value="0">Không thuộc đối tượng ưu tiên</option>
+                </select>
+              </form>
+            </div>
+            <div class="form-group py-1">
+              <label for="diemChuan">Nhập điểm chuẩn trúng tuyển</label>
+              <input type="number" class="form-control" id="diemChuan">
+            </div>
+            <button type="button" id="tinhBai1" class="btn btn-success">Kết quả xét tuyển</button>
+          </form>
+          <p class="alert alert-info" id="txtResultbai1"></p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="baiTap2" role="tabpanel" aria-labelledby="profile-tab">
+        <div class=" container py-5" id="bai2">
+          <h3>Bài tập 2 - Tính tiền điện</h3>
+          <div class="form-group">
+            <label for="soDien">Nhập số Kw điện tiêu thụ trong tháng</label>
+            <input type="number" class="form-control" id="soDien">
+          </div>
+          <form>
+            <button type="button" id="tinhBai2" class="btn btn-success">Tính tiền điện</button>
+          </form>
+          <p class="alert alert-info" id="txtResultbai2"></p>
+        </div>
+      </div>
+      <div class="tab-pane fade" id="baiTap3" role="tabpanel" aria-labelledby="contact-tab">
+        <div class=" container py-5" id="bai3">
+          <h3>Bài tập 3 - Tính thuế Thu nhập cá nhân</h3>
+          <form>
+            <div class="form-group">
+              <label for="hoTen">Nhập họ và tên người khai thuế</label>
+              <input type="text" class="form-control" id="hoTen">
+            </div>
+            <div class="form-group">
+              <label for="tongThuNhap">Nhập tổng thu nhập năm (triệu đồng)</label>
+              <input type="number" class="form-control" id="tongThuNhap">
+            </div>
+            <div class="form-group">
+              <label for="soNguoiPT">Nhập số người phụ thuộc (người)</label>
+              <input type="number" class="form-control" id="soNguoiPT">
+            </div>
+            <button type="button" id="tinhBai3" class="btn btn-success">Tính thuế TNCN</button>
+          </form>
+          <p class="alert alert-info" id="txtResultbai3"></p>
+        </div>
+      </div>
+
+
+      
+      <div class="tab-pane fade" id="baiTap4" role="tabpanel" aria-labelledby="contact-tab">
+        <div class=" container py-5" id="bai4">
+          <h3>Bài tập 4 - nhận diện loại tam giác</h3>
+          <form>
+            <div class="form-group">
+              <label for="canhA">Nhập chiều dài cạnh A</label>
+              <input type="number" class="form-control" id="canhA">
+            </div>
+            <div class="form-group">
+              <label for="canhB">Nhập chiều dài cạnh B</label>
+              <input type="number" class="form-control" id="canhB">
+            </div>
+            <div class="form-group">
+              <label for="canhC">Nhập chiều dài cạnh C</label>
+              <input type="number" class="form-control" id="canhC">
+            </div>
+            <button type="button" id="tinhBai4" class="btn btn-success">Nhận diện tam giác</button>
+          </form>
+          <p class="alert alert-info" id="txtResultbai4"></p>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+  <!-- BS 4 JS -->
+  <script src="https://cdn.jsdelivr.net/npm/jquery@3.5.1/dist/jquery.slim.min.js"
+    integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj"
+    crossorigin="anonymous"></script>
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-fQybjgWLrvvRgtW6bFlB7jaZrFsaBXjsOMm/tB9LTS58ONXgqbR9W8oWht/amnpF"
+    crossorigin="anonymous"></script>
+  <script src="./baiTapJS_buoi5.js"></script>
+</body>
+
+</html>
