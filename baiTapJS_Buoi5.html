@@ -117,22 +117,33 @@
 
       
       <div class="tab-pane fade" id="baiTap4" role="tabpanel" aria-labelledby="contact-tab">
-        <div class=" container py-5" id="bai4">
-          <h3>Bài tập 4 - nhận diện loại tam giác</h3>
+        <div class="container py-5" id="bai4">
+          <h3>Bài tập 4 - Tính tiền cáp</h3>
           <form>
             <div class="form-group">
-              <label for="canhA">Nhập chiều dài cạnh A</label>
-              <input type="number" class="form-control" id="canhA">
+              <label for="maKH">Nhập Mã khách hàng</label>
+              <input type="text" class="form-control" id="maKH" value="KH001">
             </div>
+            <form>Chọn loại khách hàng
+              <select id="loaiKH" onchange="xacDinhLoaiKH()">
+                <option value="">Chọn Loại khách hàng</option>
+                <option value="HD">Hộ dân</option>
+                <option value="DN">Doanh nghiệp</option>
+              </select>
+            </form>
+            <div class="hidden">
+              <div class="form-group" id="ketNoi">
+                <label for="soKetNoi">Nhập Số kết nối</label>
+                <input type="number" class="form-control hidden" id="soKetNoi">
+              </div>
+            </div>
+
+
             <div class="form-group">
-              <label for="canhB">Nhập chiều dài cạnh B</label>
-              <input type="number" class="form-control" id="canhB">
+              <label for="soKenhCC">Nhập số kênh cao cấp</label>
+              <input type="number" class="form-control" id="soKenhCC">
             </div>
-            <div class="form-group">
-              <label for="canhC">Nhập chiều dài cạnh C</label>
-              <input type="number" class="form-control" id="canhC">
-            </div>
-            <button type="button" id="tinhBai4" class="btn btn-success">Nhận diện tam giác</button>
+            <button type="button" id="tinhBai4" class="btn btn-success">Tính tiền thanh toán</button>
           </form>
           <p class="alert alert-info" id="txtResultbai4"></p>
         </div>

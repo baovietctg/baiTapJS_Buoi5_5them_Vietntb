@@ -136,5 +136,51 @@ function tinhThue(){
 }
 document.getElementById("tinhBai3").onclick = tinhThue;
 
+/**
+ * Bài tập 4 - tính tiền cáp
+ * Khối 1: Input
+ * - maKH
+ * - loaiKH: nhà dân và doanh nghiệp
+ * - soKetNoi: nếu chọn loạiKH là doanh nghiệp
+ * - soKenhCC
+ * 
+ * Khối 2:
+ * 
+ * 
+ * Khối 3: Output
+ * Tính tiền cáp
+ */
 
+function  tinhTienCap(){
+    var maKH = document.getElementById("maKH").value;
+    var soKetNoi = Number(document.getElementById("soKetNoi").value);
+    var soKenhCC = Number(document.getElementById("soKenhCC").value);
+    var loaiKH = document.getElementById("loaiKH").value;
+    console.log(maKH,loaiKH,soKetNoi,soKenhCC);
+    if (loaiKH == "HD"){
+        var tienCap = 4.5 + 20.5 + (soKenhCC * 7.5);
+        var ketqua = "Tiền phải thanh toán tháng này của Khách hàng mã " + maKH + " là: " + tienCap + " USD"
+    }else if (loaiKH == "DN" && soKetNoi <= 10){
+        var tienCap = 15 + 75 + (soKenhCC * 50);
+        var ketqua = "Tiền phải thanh toán tháng này của Khách hàng mã " + maKH + " là: " + tienCap + " USD"
+    }else if (loaiKH == "DN" && soKetNoi > 10){
+        var tienCap = 15 + 75 + (soKetNoi - 10) * 5 + (soKenhCC * 50);
+        var ketqua = "Tiền phải thanh toán tháng này của Khách hàng mã " + maKH + " là: " + tienCap + " USD"
+    }else {
+        alert("Vui lòng chọn Loại khách hàng")
+    }
+    document.getElementById("txtResultbai4").innerHTML = ketqua;
+}
+document.getElementById("tinhBai4").onclick = tinhTienCap;
 
+// document.getElementById("ketNoi").style.display = 'none';
+
+function xacDinhLoaiKH(){
+    var loaiKH = document.getElementById("loaiKH").value;
+    console.log(loaiKH);
+    if(loaiKH == "DN"){
+        document.getElementById("ketNoi").style.display = 'inline';
+    }else {
+        document.getElementById("ketNoi").style.display = 'none';
+    }
+}
